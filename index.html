@@ -1,50 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hanshika Shanvi — Portfolio</title>
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hanshika Shanvi — Portfolio</title>
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-
-<body>
-  <!-- NAV -->
-  <nav id="mainNav">
-    <div class="nav-inner">
-      <div class="logo">Hanshika Shanvi</div>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html" data-target="home">Home</a>
-        <a href="about.html" data-target="about">About</a>
-        <a href="education.html" data-target="education">Education</a>
-        <a href="skills.html" data-target="skills">Skills</a>
-        <a href="project.html" data-target="projects">Projects</a>
-        <a href="contact.html" data-target="contact">Contact</a>
+  <body>
+    <!-- NAV -->
+    <nav id="mainNav">
+      <div class="nav-inner">
+        <div class="logo">Hanshika Shanvi</div>
+        <div
+          class="hamburger"
+          onclick="document.body.classList.toggle('nav-open')"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" data-target="home">Home</a>
+          <a href="about.html" data-target="about">About</a>
+          <a href="education.html" data-target="education">Education</a>
+          <a href="skills.html" data-target="skills">Skills</a>
+          <a href="project.html" data-target="projects">Projects</a>
+          <a href="contact.html" data-target="contact">Contact</a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <header id="home" class="hero full-frame">
-    <div class="hero-inner">
-      <h1>Hey there !, I'm <span class="gradient-text">Hanshika Shanvi</span></h1>
-      <h2>MERN Stack Developer | Java (DSA)</h2>
-      <p class="tagline">“Turning ideas into interactive experiences.”</p>
+    <header id="home" class="hero full-frame">
+      <div class="hero-inner">
+        <h1>
+          Hey there !, I'm <span class="gradient-text">Hanshika Shanvi</span>
+        </h1>
+        <h2>MERN Stack Developer | Java (DSA)</h2>
+        <p class="tagline">“Turning ideas into interactive experiences.”</p>
 
-      <div class="btns">
-        <a class="btn btn-primary" href="contact.html">Get In Touch</a>
-        <a class="btn btn-secondary" href="project.html">View My Work</a>
+        <div class="btns">
+          <a class="btn btn-primary" href="contact.html">Get In Touch</a>
+          <a class="btn btn-secondary" href="project.html">View My Work</a>
+        </div>
+
+        <div class="socials" aria-hidden="false">
+          <a
+            href="https://github.com/Shanvi30"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/hanshika-shanvi-420bb825b/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:hanshikashanvi@gmail.com" aria-label="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a
+            href="https://leetcode.com/u/hanshikashanvi/"
+            target="_blank"
+            aria-label="LeetCode"
+            ><i class="fas fa-code"></i
+          ></a>
+        </div>
       </div>
-
-      <div class="socials" aria-hidden="false">
-        <a href="https://github.com/Shanvi30" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/hanshika-shanvi-420bb825b/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:hanshikashanvi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://leetcode.com/u/hanshikashanvi/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
-      </div>
-    </div>
-  </header>
-</body>
+    </header>
+  </body>
 </html>
