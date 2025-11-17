@@ -1,3 +1,11 @@
+body {
+  padding-top: 70px;  
+}
+
+section, header, .section, .skills-wrapper, .edu-wrapper {
+  scroll-margin-top: 120px !important;
+}
+
 :root{
       --bg:#0d0d0d;
       --card:#141418;
@@ -8,8 +16,7 @@
       --vh-offset: 0px;
     }
 
-    /* Reset & base */
-    *{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
     body{
       font-family:"Inter","Poppins",sans-serif;
@@ -23,7 +30,6 @@
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
 
-    /* ---------- NAV (Floating Rounded) ---------- */
     nav{
       position:fixed;
       left:50%;
@@ -57,7 +63,6 @@
     .nav-links a.active::after{width:40%}
     @media(max-width:720px){ .nav-links{gap:12px} }
 
-    /* ---------- HAMBURGER ICON ---------- */
 .hamburger {
     width: 32px;
     height: 22px;
@@ -76,7 +81,6 @@
     transition: 0.35s ease;
 }
 
-/* When menu opens */
 .nav-open .hamburger span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
@@ -87,7 +91,6 @@
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* ---------- MOBILE MENU ---------- */
 @media (max-width:720px){
     .hamburger {
         display: flex;
@@ -122,11 +125,21 @@
 }
 
 section, header.hero, .section, .skills-wrapper, .edu-wrapper {
-    scroll-margin-top: 120px; /* prevents hiding behind navbar */
+    scroll-margin-top: 120px;
 }
 
+header.hero,
+#about,
+#education,
+#skills,
+#projects,
+#contact,
+.section,
+.skills-wrapper,
+.edu-wrapper {
+    scroll-margin-top: 120px !important;
+}
 
-    /* ---------- Section layout ---------- */
     .full-frame{
       min-height: calc(100vh - var(--vh-offset));
       display:flex;
@@ -230,7 +243,7 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
     .about p {
         color:#d6d6d6;
         margin-bottom:14px;
-        font-size:18px; /* ✔ Text increased */
+        font-size:18px;
         font-weight:400;
     }
 
@@ -280,30 +293,33 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
       .about-card{padding:22px}
     }
 
+    /* ----------- FIX: SHOW PHOTO FIRST ON MOBILE ----------- */
+    @media (max-width:720px){
+        .about-card { flex-direction: column-reverse; }
+        .about .about-img { order:-1; margin-bottom:20px; }
+    }
+
     /* ---------- EDUCATION TIMELINE ---------- */
     .edu-wrapper{width:min(800px,100%);margin:0 auto}
-    /* Move the Education section down to avoid navbar overlap */
 .edu-wrapper {
     width: min(800px, 100%);
-    margin: 80px auto 0; /* top margin added to push it below navbar */
+    margin: 80px auto 0;
 }
 
-/* Optional: add some extra spacing for the heading */
 .edu-wrapper h2 {
-    font-size: 2rem; /* make heading slightly bigger */
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #eae6ff;
 }
 
-/* ---------- EDUCATION TIMELINE ---------- */
 .edu-wrapper {
-    width: min(750px, 100%); /* slightly smaller to fit in one frame */
-    margin: 100px auto 0; /* push section below navbar */
-    padding: 0 10px; /* small side padding */
+    width: min(750px, 100%);
+    margin: 100px auto 0;
+    padding: 0 10px;
 }
 
 .edu-wrapper h2 {
-    font-size: 2rem; /* slightly larger heading */
+    font-size: 2rem;
     margin-bottom: 25px;
     color: #eae6ff;
     text-align: center;
@@ -328,14 +344,14 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
 
 .edu-item {
     position: relative;
-    padding: 10px 0 25px 30px; /* slightly less padding to shrink card height */
+    padding: 10px 0 25px 30px;
 }
 
 .edu-dot {
     position: absolute;
     left: 0;
     top: 8px;
-    width: 14px; /* smaller dot */
+    width: 14px;
     height: 14px;
     border-radius: 50%;
     background: linear-gradient(90deg, var(--accent2), var(--accent1));
@@ -344,7 +360,7 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
 
 .edu-content {
     background: rgba(255, 255, 255, 0.02);
-    padding: 12px 14px; /* shrink padding */
+    padding: 12px 14px;
     border-radius: 12px;
     border: 1px solid var(--glass-border);
     text-align: left;
@@ -353,7 +369,7 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
 .edu-content h3 {
     color: #eae6ff;
     margin-bottom: 4px;
-    font-size: 1.15rem; /* slightly bigger than before */
+    font-size: 1.15rem;
 }
 
 .edu-content p {
@@ -368,7 +384,7 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
     margin-top: 4px;
 }
 
-/* ---------- HORIZONTAL SKILLS LAYOUT ---------- */
+/* ---------- SKILLS ---------- */
 .skills-wrapper {
     width: min(1000px, 100%);
     margin: 80px auto 0;
@@ -382,14 +398,12 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
     margin-bottom: 30px;
 }
 
-/* Horizontal card container */
 .skills-grid {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-/* Horizontal skill card */
 .skill-card {
     display: flex;
     align-items: center;
@@ -402,14 +416,12 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
     backdrop-filter: blur(6px);
 }
 
-/* Hover effect */
 .skill-card:hover {
     transform: translateX(10px);
     border-color: rgba(106, 90, 205, 0.35);
     box-shadow: 0 10px 35px rgba(106, 90, 205, 0.18);
 }
 
-/* Heading inside the horizontal card */
 .skill-card h3 {
     font-size: 1.3rem;
     color: var(--accent1);
@@ -419,7 +431,6 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
     gap: 10px;
 }
 
-/* Skill list on the right side */
 .skill-list {
     display: flex;
     flex-wrap: wrap;
@@ -427,7 +438,6 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
     justify-content: flex-end;
 }
 
-/* Tags */
 .skill-list span {
     background: rgba(255, 255, 255, 0.05);
     padding: 6px 14px;
@@ -440,7 +450,6 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
     transition: 0.2s ease;
 }
 
-/* Tag hover */
 .skill-list span:hover {
     background: rgba(86, 78, 138, 0.25);
     transform: scale(1.08);
@@ -450,7 +459,6 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
     color: #b39fff;
 }
 
-/* Responsive - full width on small screens */
 @media (max-width: 700px) {
     .skill-card {
         flex-direction: column;
@@ -486,6 +494,8 @@ section, header.hero, .section, .skills-wrapper, .edu-wrapper {
     @keyframes cardIn{to{opacity:1;transform:translateY(0)}}
 
     footer{padding:26px 20px;text-align:center;color:#777;background:#09090a;margin-top:48px;border-top:1px solid rgba(255,255,255,0.02)}
+
+
 
     /* Responsive */
     @media (max-width:900px){
