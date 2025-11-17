@@ -192,13 +192,6 @@ nav.scrolled {
 
 section,
 header.hero,
-.section,
-.skills-wrapper,
-.edu-wrapper {
-  scroll-margin-top: 120px;
-}
-
-header.hero,
 #about,
 #education,
 #skills,
